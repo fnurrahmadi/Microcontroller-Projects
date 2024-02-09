@@ -1,0 +1,18 @@
+h1.text-center {
+  color:black;
+}
+
+p.text-center {
+  color:black;
+}
+
+div#fakediv {
+  background:url(../../assets/img/park.jpg);
+  opacity:0.4;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gita</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.css">
+    <link rel="stylesheet" href="/static/assets/css/untitled.css">
+</head>
+
+<body>
+    <div id="topdiv">
+        <div class="page-header" style="background-color:#efefef;">
+            <h1 style="padding:5px;"><i class="fa fa-car" style="width:45px;"></i>Tempat Parkir<small>&nbsp;Pantau di website kami untuk melihat ketersediaan tempat</small></h1>
+        </div>
+    </div>
+    <div id="middiv" style="background-color:#e1e1e1;"><div id="fakediv"></div>
+        <h1 class="text-center" style="font-size:40px;">Kami menyediakan tempat parkir!</h1>
+        <p class="text-center" style="font-size:16px;">Tempat parkir kami dapat digunakan untuk mobil berukuran sedang.</p>
+        <p class="text-center" style="font-size:16px;">Jumlah kendaraan yang telah memasuki tempat parkir kami hari ini:&nbsp;<small style="font-size:16px;">{{counter}}</small></p>
+    </div>
+    <div id="botdiv" style="margin:32px;background-color:#f1f1f1;">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-size:32px;">P1 : <small>{{p1}} </small></td>
+                        <td style="font-size:32px;">P5 : <small>{{p5}} </small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:32px;">P2 : <small>{{p2}} </small></td>
+                        <td style="font-size:32px;">P6 : <small>{{p6}} </small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:32px;">P3 : <small>{{p3}} </small></td>
+                        <td style="font-size:32px;">P7 : <small>{{p7}} </small></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:32px;">P4 : <small>{{p4}} </small></td>
+                        <td style="font-size:32px;">P8 : <small>{{p8}} </small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

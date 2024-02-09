@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CameraCar</title>
+
+<style type="text/css">
+.btnMaju {
+
+    position: absolute;
+    left: 900px;
+    top: 200px;
+}
+.btnMundur {
+    position: absolute;
+    left: 900px;
+    top: 400px;
+}
+.btnKiri {
+    position: absolute;
+    left: 750px;
+    top: 300px;
+}
+.btnKanan {
+    position: absolute;
+    left: 1050px;
+    top: 300px;
+}
+button {
+		  display: inline-block;
+		  padding: 15px 25px;
+		  font-size: 24px;
+		  cursor: pointer;
+		  text-align: center;
+		  text-decoration: none;
+		  outline: none;
+		  color: #fff;
+		  background-color: #4CAF50;
+		  border: none;
+		  border-radius: 15px;
+		  box-shadow: 0 9px #999;
+          height: 50px;
+    	  width: 150px;
+	}
+
+	button:hover {background-color: #3e8e41}
+
+	button:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}	
+
+         
+</style>	
+
+</head>
+<body>
+<p style="font-size:36px ">Mobil Camera Menggunakan Raspberry</p>
+<img src="http://{{ip}}:8080/?action=stream" />
+
+<button class="btnMaju" >Maju</button>
+<button class="btnMundur" >Mundur</button>
+<button class="btnKiri" >Kiri</button>
+<button class="btnKanan" >Kanan</button>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    <script type="text/javascript">
+      jQuery(document).ready(function(){ // Triggers when the document is ready
+
+        jQuery('button.btnMaju').on('mousedown',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/maju',
+            cache: false
+          });
+        });
+        jQuery('button.btnMaju').on('mouseup',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/off',
+            cache: false
+          });
+        });
+        jQuery('button.btnMundur').on('mousedown',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/mundur',
+            cache: false
+          });
+        });
+        jQuery('button.btnMundur').on('mouseup',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/off',
+            cache: false
+          });
+        });
+        jQuery('button.btnKiri').on('mousedown',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/kiri',
+            cache: false
+          });
+        });
+        jQuery('button.btnKiri').on('mouseup',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/off',
+            cache: false
+          });
+        });
+        jQuery('button.btnKanan').on('mousedown',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/kanan',
+            cache: false
+          });
+        });
+        jQuery('button.btnKanan').on('mouseup',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: '/action/off',
+            cache: false
+          });
+        });
+
+
+      })
+    </script>
+</body>
+</html>
